@@ -1,0 +1,25 @@
+input{
+    color: wheat !important;
+}
+
+input:focus {
+    color: wheat !important;
+}
+
+option{
+    color: wheat !important;
+}
+
+#select{
+    color: wheat !important;
+}
+
+.custom-text-area, .custom-text-area:focus{
+    height: 250px !important; 
+    color: wheat; 
+    line-height: 24px;
+}
+#previewImage{
+    height: 100px; 
+    width: 150px
+}
