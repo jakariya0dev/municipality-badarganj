@@ -5,12 +5,12 @@
 
 ?>
 
-<section id="gallery" data-aos="fade-up">
+<section id="video-gallery" data-aos="fade-up">
         
     <p class="title">ভিডিও গ্যালারি</p>
 
-    <div class="photo-gallery mb-5">
-        <div class="row row-cols-md-2 ">
+    <div class="photo-gallery m-md-5 mb-5">
+        <div class="row row-cols-1 row-cols-md-2 ">
 
         <?php while($row = mysqli_fetch_assoc($galleryResult)): ?>
             <div class="col">

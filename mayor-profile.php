@@ -37,7 +37,7 @@
                     <div class="col-md-9">
                         
                         <div>
-                            <p class="title" style="margin-top: 0">মেয় বাণী</p>
+                            <p class="title" style="margin-top: 0">মেয়রের বাণী</p>
 
                             <div class="card mb-3">
                                     <div class="row gx-3">
@@ -59,36 +59,6 @@
                                     <div class="about-content mb-4">
                                         <div style="text-align: justify;">
                                             <?php echo $president['speech'] ?>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-5">
-                            <p class="title" style="margin-top: 0">অধ্যক্ষের বাণী</p>
-
-                            <div class="card mb-3">
-                                    <div class="row gx-3">
-                                        <div class="col-md-4">
-                                            <img class="img-fluid w-100 p-3" src="<?php echo 'admin/'.$principal['image'] ?>" alt="">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="d-flex flex-column justify-content-center h-100">
-                                                <p class="card-title display-6"><?php echo $principal['name'] ?></p>
-                                                <h4 class="card-text"><?php echo $principal['designation'] ?></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <div class="row">
-                            
-                                <div class="col-md-12">
-                                    <div class="about-content mb-4">
-                                        <div style="text-align: justify;">
-                                            <?php echo $principal['speech'] ?>
                                         </div>
                                         
                                     </div>

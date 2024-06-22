@@ -1,11 +1,11 @@
 <?php 
 
-    $sql4teacher = "SELECT * FROM `teacher`";
+    $sql4teacher = "SELECT * FROM `employee`";
 
     $teacher = mysqli_query($conn, $sql4teacher);
     
 ?>
-<section id="teachers">
+<section id="employee">
     <p class="title">কর্মকর্তা-কর্মচারী</p>
 
     <div class="container bg-white" data-aos="fade-up">
@@ -13,7 +13,7 @@
         <div class="owl-carousel owl-theme">
 
             <?php while ($row = mysqli_fetch_array($teacher)): ?>
-                <a href="<?php echo 'teacher.php?id='.$row['id'] ?>" class="text-decoration-none">
+                <a href="<?php echo 'employee.php?id='.$row['id'] ?>" class="text-decoration-none">
                     <div class="item">
                         <div class="team-member">
                             <div class="pro-pic">

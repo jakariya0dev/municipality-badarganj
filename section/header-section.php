@@ -18,19 +18,19 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index.php#about">বদরগঞ্জ পৌরসভা</a>
+                                <a class="nav-link text-white" href="about-us.php">বদরগঞ্জ পৌরসভা</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index.php#speech">মেয়র</a>
+                                <a class="nav-link text-white" href="mayor-profile.php">মেয়র</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index.php#counsellor">কাউন্সিলরবৃন্দ</a>
+                                <a class="nav-link text-white" href="counsellor-list.php">কাউন্সিলরবৃন্দ</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index.php#employees">কর্মকর্তা-কর্মচারী</a>
+                                <a class="nav-link text-white" href="employee-list.php">কর্মকর্তা-কর্মচারী</a>
                             </li>
 
                             <li class="nav-item">
@@ -39,6 +39,10 @@
 
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="index.php#video-gallery">ভিডিও গ্যালারি</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.php#contact">যোগাযোগ</a>
                             </li>
 
                         </ul>

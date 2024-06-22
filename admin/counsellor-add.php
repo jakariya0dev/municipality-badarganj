@@ -9,18 +9,23 @@
 
         if($_FILES['image']['size'] < 2*1024*1024 && $_FILES['image']['size'] > 0){
 
-            $pro_pic_dir = "uploads/teacher/";
-            $pro_pic_ext = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+            $image_dir = "uploads/counsellor/";
+            $pic_ext = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+
+            if(!is_dir($image_dir))
+            {
+                mkdir($image_dir, 0777);
+            }
 
             // Upload Profile Picture
-            $pro_pic_name = time().'.'.$pro_pic_ext;
-            move_uploaded_file($_FILES['image']['tmp_name'], $pro_pic_dir.$pro_pic_name);
+            $pro_pic_name = time().'.'.$pic_ext;
+            move_uploaded_file($_FILES['image']['tmp_name'], $image_dir.$pro_pic_name);
 
-            // Seed Teacher Data to Database
+            // Seed counsellor Data to Database
             $name = $_POST['name'];
             $designation = $_POST['designation'];
             $phone = $_POST['phone'];
-            $image = $pro_pic_dir.$pro_pic_name;
+            $image = $image_dir.$pro_pic_name;
             $email = $_POST['email'];
             $index_number = $_POST['index_number'];
             $qualification = $_POST['qualification'];
@@ -31,15 +36,15 @@
             $present_address = $_POST['present_address'];
             $permanent_address = $_POST['permanent_address'];
             
-            $sql = "INSERT INTO `teacher`(`name`, `designation`, `phone`, `image`, `email`, `index_number`, `qualification`, `department`, `blood_group`, `birth_date`, `joining_date`, `present_address`, `permanent_address`) VALUES ('$name', '$designation', '$phone', '$image', '$email', '$index_number', '$qualification', '$department', '$blood_group', '$birth_date', '$joining_date', '$present_address', '$permanent_address');";
+            $sql = "INSERT INTO `counsellor`(`name`, `designation`, `phone`, `image`, `email`, `index_number`, `qualification`, `department`, `blood_group`, `birth_date`, `joining_date`, `present_address`, `permanent_address`) VALUES ('$name', '$designation', '$phone', '$image', '$email', '$index_number', '$qualification', '$department', '$blood_group', '$birth_date', '$joining_date', '$present_address', '$permanent_address');";
 
             $result = mysqli_query($conn, $sql) or die("Query Failed: ". mysqli_error($conn));
 
             if($result){
-                header("Location: teacher-all.php");
+                header("Location: counsellor-all.php");
             }
             else{
-                echo "<script>Failed to Add Teacher</script>";
+                echo "<script>Failed to Add counsellor</script>";
             }
 
         }
@@ -81,9 +86,9 @@
                 <div class="col-md-8 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Add New Teacher</h4>
+                    <h4 class="card-title">Add New Counsellor</h4>
                     
-                    <p class="card-description"> Home / Teacher /<code>New</code> </p>
+                    <p class="card-description"> Home / Counsellor /<code>New</code> </p>
                     
                     <hr class="mb-5">
 
@@ -167,7 +172,7 @@
                         </div>
 
                         <div class="form-group mb-4">
-                            <label>Teacher Picture</label>
+                            <label>Counsellor Picture</label>
                             <input id="inputImage" name="image" type="file" class="form-control form-control-lg">
                         </div>
 

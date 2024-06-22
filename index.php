@@ -19,7 +19,7 @@
 
     <body>
         
-        <div style="width: 75%; margin:auto">
+        <div class="main-container">
             <div class="container-fluid bg-white">
 
                 <!-- Header with Nav Start -->
@@ -32,8 +32,8 @@
 
                 <div class="row">
                     <div class="col-md-9">
-                        <?php include_once './section/about-us.php' ?>
-                        <?php include_once './section/speech-section.php' ?>
+                        <?php include_once './section/about.php' ?>
+                        <?php include_once './section/mayor-speech.php' ?>
                         <?php include_once './section/feature-section.php' ?>
                         <?php include_once './section/achievement.php' ?>
                     </div>
@@ -47,7 +47,7 @@
                 <!-- Counsellor Section END  -->
 
                  <!-- Teacher Section START  -->
-                <?php include_once './section/officials.php' ?>
+                <?php include_once './section/employee.php' ?>
                 <!-- Teacher Section END  -->
 
                 <!-- Photo Gallery Start -->
@@ -64,6 +64,8 @@
 
             </div>
         </div>
+
+        <div onclick="topFunction()" id="scrollTopButton" title="Go to top">^</div>
   
         <?php include_once './section/footer-links.php' ?>
 

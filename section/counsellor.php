@@ -1,6 +1,6 @@
 <?php 
 
-    $sql4teacher = "SELECT * FROM `teacher`";
+    $sql4teacher = "SELECT * FROM `counsellor`";
 
     $teacher = mysqli_query($conn, $sql4teacher);
     

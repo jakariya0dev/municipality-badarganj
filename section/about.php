@@ -7,7 +7,7 @@
     
 ?>
 
-<section id="about">
+<section id="about-us">
     <div>
         <p class="title" style="margin-top: 0"> <?php echo $ins_name_bn ?> </p>
 

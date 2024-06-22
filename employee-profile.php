@@ -3,7 +3,7 @@
     include_once 'config.php';
   
     $id = $_GET['id'];
-    $sql = "SELECT * FROM teacher WHERE `id` = $id";
+    $sql = "SELECT * FROM employee WHERE `id` = $id";
     $teacher = mysqli_query($conn, $sql) or die(mysqli_error($con));
     $teacher = mysqli_fetch_assoc($teacher);
 
@@ -32,8 +32,8 @@
                 <nav aria-label="breadcrumb" class="mt-4 position-static">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php" class="text-decoration-none">হোম</a></li>
-                        <li class="breadcrumb-item"><a href="teacher-list.php" class="text-decoration-none">শিক্ষক তালিকা</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">শিক্ষক</li>
+                        <li class="breadcrumb-item"><a href="employee-list.php" class="text-decoration-none">কর্মকর্তা-কর্মচারীর তালিকা</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">কর্মকর্তা-কর্মচারী</li>
                     </ol>
                 </nav>
 

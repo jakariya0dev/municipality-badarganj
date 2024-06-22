@@ -8,7 +8,7 @@
 
 ?>
 
-<section id="#footer">
+<section id="contact">
     <footer class="container">
         <div class="row p-5 text-white">
 
@@ -53,7 +53,9 @@
         <div class="row text-center bg-primary-dark text-white px-3 pt-5">
             <div class="col-md-6 text-center text-md-start">
                 কপিরাইট © <?php echo date("Y"); ?> সর্বস্বত্ব সংরক্ষিত <br>
-                <p><?php echo $ins_name_bn; ?></p>
+                <a href="#" class="text-decoration-none" style="color: wheat">
+                    <h5><?php echo $ins_name_bn; ?></h5>
+                </a>
             </div>
             <div class="col-md-6 text-center text-md-end">
                 কারিগরি সহযোগিতায় <br>

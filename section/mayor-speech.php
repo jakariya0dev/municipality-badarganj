@@ -11,7 +11,7 @@
 
 ?>
 
-<section id="speech">
+<section id="mayor-speech">
     <p class="title">পৌর মেয়র</p>
 
     <div class="speech-item">

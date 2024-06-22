@@ -2,7 +2,7 @@
   
     include_once 'config.php';
   
-    $sql = "SELECT * FROM teacher";
+    $sql = "SELECT * FROM counsellor";
     $teacher = mysqli_query($conn, $sql) or die(mysqli_error($con));
 
 ?>
@@ -30,21 +30,21 @@
                 <nav aria-label="breadcrumb" class="mt-4 position-static">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php" class="text-decoration-none">হোম</a></li>
-                        <li class="breadcrumb-item"> কর্মকর্তা-কর্মচারী </li>
+                        <li class="breadcrumb-item">কাউন্সিলর</li>
                         
                     </ol>
                 </nav>
                 <div class="row mt-4">
                     <div class="col-md-9">
                         <div class="mt-4">
-                            <p class="display-6 text-center mb-3">কর্মকর্তা-কর্মচারীর তালিকা</p>
+                            <p class="display-6 text-center mb-5 mt-5">পৌর কাউন্সিলরবৃন্দ</p>
 
                             <?php if(mysqli_num_rows($teacher) > 0) : ?>
                                 <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
                                     <?php while ($row = mysqli_fetch_array($teacher)): ?>
                                         
                                         <div class="col">
-                                            <a href="<?php echo 'employee.php?id='.$row['id'] ?>" class="text-decoration-none">
+                                            <a href="<?php echo 'employee-profile.php?id='.$row['id'] ?>" class="text-decoration-none">
                                                 <div class="item employee-card mb-5">
                                                     <div class="team-member card">
                                                         <div class="pro-pic card-img-top">

@@ -8,13 +8,13 @@
   if(isset($_POST["delete_btn"])){
 
     $t_id = $_POST["t_id"];
-    $sql = "DELETE FROM teacher WHERE id = $t_id";
+    $sql = "DELETE FROM employee WHERE id = $t_id";
     $result = mysqli_query($conn, $sql);
 
     unlink($_POST['t_picture']);
 
     if($result){
-      header("Location: teacher-all.php");
+      header("Location: employee-all.php");
     }
     else{
       $error = true;
@@ -22,7 +22,7 @@
 
   }
 
-  $sql = "SELECT * FROM teacher ORDER BY Id DESC";
+  $sql = "SELECT * FROM employee ORDER BY Id DESC";
   $result = mysqlI_query($conn, $sql);
 
 ?>
@@ -33,7 +33,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Corona Admin</title>
+    <title>Site Admin</title>
     <?php include './components/header-links.php' ?>
   </head>
   <body>
@@ -56,8 +56,8 @@
               <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">All Teacher List</h4>
-                    <p class="card-description"> Home / Teacher / <code>All</code></p>
+                    <h4 class="card-title">All Employee List</h4>
+                    <p class="card-description"> Home / Employee / <code>All</code></p>
                     
                     <hr class="mb-5">
 
@@ -68,7 +68,7 @@
                       </div>
                     <?php endif; ?>
 
-                    <a href="teacher-add.php" class="btn btn-warning p-2">Add New</a>
+                    <a href="employee-add.php" class="btn btn-warning p-2">Add New</a>
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
@@ -95,7 +95,7 @@
                             <td> <img src="<?php echo $row['image'] ?>" alt="pro-pic"> </td>
                             
                             <td>
-                              <a href="<?php echo 'teacher-edit.php?id='.$row['id']?>" class="btn btn-primary"> <i class="bi bi-pencil-square"></i> Edit</a>
+                              <a href="<?php echo 'employee-edit.php?id='.$row['id']?>" class="btn btn-primary"> <i class="bi bi-pencil-square"></i> Edit</a>
                               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" class="d-inline">
                                 <input type="hidden" name="t_id" value="<?php echo $row['id']?>">
                                 <input type="hidden" name="t_picture" value="<?php echo $row['image']?>">
