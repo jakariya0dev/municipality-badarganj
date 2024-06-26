@@ -3,9 +3,6 @@
     $notice_sql = "SELECT * FROM `notice` ORDER BY id LIMIT 5";
     $notice = mysqli_query($conn, $notice_sql) or die(mysqli_error($con));
 
-    $academic_sql = "SELECT * FROM `academic` ORDER BY id LIMIT 5";
-    $academic = mysqli_query($conn, $academic_sql) or die(mysqli_error($con));
-
 ?>
 
     <div class="notice-board mb-5" data-aos="zoom-in">
