@@ -1,6 +1,6 @@
 <?php 
 
-    include_once 'config.php';
+    include_once './../config.php';
     include_once 'auth.php';
     
     $pro_pic_error = false;
