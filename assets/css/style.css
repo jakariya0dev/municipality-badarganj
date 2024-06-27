@@ -53,6 +53,7 @@ body {
   background-image: url('./../../images/bg.jpg');
   background-attachment: fixed;
   font-size: 16px;
+  height: 100vh;
 }
 
 /* Logo section */
@@ -87,11 +88,11 @@ body {
 
 
 .logo-title h1{
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 .logo-title h2{
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
 .section-heading {
@@ -181,10 +182,6 @@ body {
 
 /* Navbar */
 
-nav{
-  position: sticky !important;
-  top: 0 !important;
-}
 .nav-item {
   padding-left: 10px;
   padding-right: 10px;
@@ -209,9 +206,6 @@ nav{
   text-shadow: 2px 2px 5px black;
 }
 
-.carousel-item img {
-  /* mix-blend-mode: overlay; */
-}
 
 .breaking-title{
   background-color: var(--green-accent);
@@ -238,9 +232,6 @@ nav{
 
 /* Speech */
 
-.speech-item {
-  /* height: 420px; */
-}
 .speech-img {
   /* height: 320px; */
   width: 100%;

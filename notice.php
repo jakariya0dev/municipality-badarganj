@@ -22,7 +22,7 @@
 
     <body>
         
-        <div style="width: 75%; margin:auto">
+        <div class="main-container">
             <div class="container-fluid bg-white">
 
                 <!-- Header with Nav Start -->

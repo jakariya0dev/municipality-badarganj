@@ -11,7 +11,7 @@
                 </div>
             </div>
 
-            <nav class="navbar fixed-top navbar-expand-lg bg-primary-dark">
+            <nav class="navbar navbar-expand-lg bg-primary-dark">
                 <div>
                     <button class="navbar-toggler bg-white m-2" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
