@@ -55,6 +55,45 @@ body {
   font-size: 16px;
 }
 
+/* Logo section */
+
+.banner-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw;
+  background: linear-gradient(#005b96, #03396c);
+  
+}
+
+.banner-top .logo{
+  height: 10vw;
+  width: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+  
+}
+
+.banner-top .logo img{
+  border-radius: 50%;
+}
+
+
+.logo-title{
+  flex-grow: 1;
+  /* background-color: #005b96; */
+  margin-left: 5vw;
+}
+
+
+.logo-title h1{
+  font-size: 5vw;
+}
+
+.logo-title h2{
+  font-size: 3vw;
+}
+
 .section-heading {
   background-color: blue;
   color: white;
@@ -392,6 +431,7 @@ footer{
       width: 75%;
       margin: auto;
     }
+
 }
 
 @media only screen and (min-width: 992px){
@@ -399,6 +439,7 @@ footer{
       width: 80%;
       margin: auto;
     }
+
 }
 
 @media only screen and (min-width: 768px){
@@ -406,4 +447,16 @@ footer{
       width: 85%;
       margin: auto;
     }
+
+}
+
+@media screen and (max-width: 768px) {
+  
+  .logo-title h1{
+    font-size: 8vw;
+  }
+
+  .logo-title h2{
+    font-size: 6vw;
+  }
 }

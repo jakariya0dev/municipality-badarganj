@@ -1,14 +1,22 @@
     <section>
         <header>
             <div class="banner-top">
-                <img src="./images/banner.png" alt="" class="img-fluid" />
+                <!-- <img src="./images/banner.png" alt="Banner Image" class="img-fluid" /> -->
+                <div class="logo">
+                    <img class="img-fluid" src="./images/logo.jpg" alt="Municipality Logo">
+                </div>
+                <div class="logo-title">
+                    <h1 class="text-white">বদরগঞ্জ পৌরসভা</h1>
+                    <h2 class="text-white">বদরগঞ্জ, রংপুর</h2>
+                </div>
             </div>
-            <nav class="navbar navbar-expand-lg bg-primary-dark">
+
+            <nav class="navbar fixed-top navbar-expand-lg bg-primary-dark">
                 <div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    <button class="navbar-toggler bg-white m-2" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon text-white"></span>
+                        <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
