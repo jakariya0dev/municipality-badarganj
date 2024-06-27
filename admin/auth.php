@@ -4,7 +4,7 @@
     session_start();
 
 
-    if(!isset($_SESSION['admin_email'])){
+    if(!isset($_SESSION['user']['email'])){
 
         header('Location: login.php');
         
@@ -29,7 +29,17 @@
         if(mysqli_num_rows($result)>0){
 
             session_start();
-            $_SESSION['admin_email'] = mysqli_fetch_assoc($result)['email'];
+            $userData = mysqli_fetch_assoc($result);
+            $_SESSION['user'] = [
+                'name' => $userData['name'],
+                'email' => $userData['email'],
+                'phone' => $userData['phone'],
+                'title' => $userData['title']
+            ];
+            // $_SESSION['user']['name'] = mysqli_fetch_assoc($result)['name'];
+            // $_SESSION['user']['email'] = mysqli_fetch_assoc($result)['email'];
+            // $_SESSION['user']['phone'] = mysqli_fetch_assoc($result)['phone'];
+            // $_SESSION['user']['title'] = mysqli_fetch_assoc($result)['title'];
             header('Location: index.php');
 
         }

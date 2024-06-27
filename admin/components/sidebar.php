@@ -1,3 +1,5 @@
+
+
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
     <a class="sidebar-brand brand-logo text-decoration-none" href="index.php">SMS-PHP</a>
@@ -13,8 +15,8 @@
             <span class="count bg-success"></span>
           </div>
           <div class="profile-name">
-            <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-            <span>Gold Member</span>
+            <h5 class="mb-0 font-weight-normal"><?= $_SESSION['user']['name']; ?></h5>
+            <span><?= $_SESSION['user']['title'] ?></span>
           </div>
         </div>
         
