@@ -7,20 +7,26 @@
 
     if(isset($_POST['submit'])){
 
-        if($_FILES['image']['size'] < 5*1024*1024 && $_FILES['image']['size'] > 0){
-
-          $dir_name = 'uploads/notice/';
-
-          if (!file_exists($dir_name)) {
-              mkdir($dir_name, 0755, true);
-          }
-          $file_name = time() .'.'. pathinfo($_FILES['n_file']['name'], PATHINFO_EXTENSION);
-          move_uploaded_file($_FILES['n_file']['tmp_name'], $dir_name.$file_name);
+        if($_FILES['n_file']['size'] < 5*1024*1024){
 
           $n_title = $_POST['n_title'];
           $n_description = $_POST['n_description'];
           $n_date = $_POST['n_date'];
-          $n_file = $dir_name.$file_name;
+          $n_file = "";
+
+          if($_FILES['n_file']['size'] > 0){
+
+              $dir_name = 'uploads/notice/';
+
+              if (!file_exists($dir_name)) {
+                  mkdir($dir_name, 0755, true);
+              }
+              
+              $file_name = time() .'.'. pathinfo($_FILES['n_file']['name'], PATHINFO_EXTENSION);
+              move_uploaded_file($_FILES['n_file']['tmp_name'], $dir_name.$file_name);
+
+              $n_file = $dir_name.$file_name;
+          }
 
           $sql = "INSERT INTO `notice`(`title`, `description`, `date`, `file`) VALUES ('$n_title','$n_description','$n_date','$n_file')";
 
@@ -99,12 +105,12 @@
 
                         <div class="form-group">
                             <label>Notice File</label>
-                            <input name="n_file" type="file" class="form-control form-control-lg">
+                            <input name="n_file" type="file" accept="image/*,.pdf" class="form-control form-control-lg">
                         </div>
 
                         <div class="form-group">
                             <label>Notice Date</label>
-                            <input name="n_date" type="date" class="form-control form-control-lg">
+                            <input name="n_date" type="date" class="form-control form-control-lg" required>
                         </div>
 
                         <input type="submit" value="Save Notice" name="submit" class="btn btn-primary">

@@ -5,6 +5,7 @@
     $id = $_GET['id'];
     $sql = "SELECT * FROM notice WHERE `id` = $id";
     $result = mysqli_query($conn, $sql) or die(mysqli_error($con));
+    $result = mysqli_fetch_assoc($result);
 
 ?>
 
@@ -31,7 +32,7 @@
                 <nav aria-label="breadcrumb" class="mt-4 position-static">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php" class="text-decoration-none">হোম</a></li>
-                        <li class="breadcrumb-item"><a href="notice-all.php" class="text-decoration-none">সব নোটিশ</a></li>
+                        <li class="breadcrumb-item"><a href="notice-list.php" class="text-decoration-none">সব নোটিশ</a></li>
                         <li class="breadcrumb-item active" aria-current="page">নোটিশ</li>
                     </ol>
                 </nav>
@@ -41,33 +42,19 @@
                         <div class="mt-5 table-responsive">
                             
 
-                                    <?php if(mysqli_num_rows($result) > 0) : ?>
-            
-                                        <?php $i = 1; while($row = mysqli_fetch_assoc($result)): ?>
+                                <h4 class="mb-4"><?php echo $result['title'] ?></h4>
+                                <p class="text-black-50"><i>Date: <?php echo date_format(date_create($result['date']),"d/m/Y"); ?></i></p>
+                                <hr>
+                                <p><?php echo $result['description'] ?></p>
+                                
 
-                                            <h4 class="mb-4"><?php echo $row['title'] ?></h4>
-                                                
-                                            <!-- <iframe src="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/'.$row['file'] ?>"
-                                                frameBorder="0"
-                                                scrolling="auto"
-                                                height="100%"
-                                                width="100%">
-                                            </iframe> -->
-
-                                            <object class="pdf" 
-                                                    data="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/admin/'.$row['file'] ?>"
-                                                    width="100%"
-                                                    height="800">
-                                            </object>
-
-                                        <?php $i++; endwhile; ?>
-                                    <?php else: ?>
-                                        <div class="notice-item bg-secondary-subtle d-flex justify-content-between bg-white p-2 mb-1">
-                                            <div>
-                                                <p class="mb-0">No Notice Found</p>
-                                            </div>
-                                        </div>
-                                    <?php endif; ?>
+                                <?php if(!empty($result['file'])): ?>
+                                    <object class="pdf" 
+                                        data="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/admin/'.$result['file'] ?>"
+                                        width="100%"
+                                        height="800">
+                                    </object>
+                                <?php endif; ?>
                                     
                             
                         </div>
