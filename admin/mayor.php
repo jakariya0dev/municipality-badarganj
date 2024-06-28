@@ -111,13 +111,13 @@
                     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
                     
                         <div class="form-group">
-                            <label>President Name:</label>
+                            <label>Mayor Name:</label>
                             <input name="name" type="text" class="form-control form-control-lg" value="<?php echo $president['name'] ?>" required>
                         </div>
                         
                         
                         <div class="form-group">
-                            <label>President Designation</label>
+                            <label>Mayor Designation</label>
                             <input name="designation" type="text" class="form-control form-control-lg" value="<?php echo $president['designation'] ?>" required>
                         </div>
 
@@ -127,7 +127,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label>President Image</label>
+                            <label>Mayor Image</label>
                             <input name="image_old" type="hidden" value="<?php echo $president['image'] ?>">
                             <input id="inputImage" name="image" type="file" class="form-control form-control-lg" accept="image/*">
                         </div>

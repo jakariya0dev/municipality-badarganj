@@ -62,7 +62,7 @@
                     
                     <hr class="mb-3">
 
-                    <a href="feature-add.php" class="btn btn-warning p-2 mb-3">Add New</a>
+                    <a href="video-add.php" class="btn btn-warning p-2 mb-3">Add New</a>
 
                     <div class="table-responsive">
                       <table class="table">
