@@ -50,7 +50,7 @@
 
                                 <?php if(!empty($result['file'])): ?>
                                     <object class="pdf" 
-                                        data="<?php echo 'http://'.$_SERVER['HTTP_HOST'].'/admin/'.$result['file'] ?>"
+                                        data="<?php echo 'https://'.$_SERVER['HTTP_HOST'].'/admin/'.$result['file'] ?>"
                                         width="100%"
                                         height="800">
                                     </object>

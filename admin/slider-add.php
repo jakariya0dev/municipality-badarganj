@@ -12,6 +12,10 @@
             $image_dir = "uploads/slider/";
             $image_ext = pathinfo($_FILES["s_image"]["name"], PATHINFO_EXTENSION);
 
+            if (!file_exists($image_dir)) {
+                  mkdir($image_dir, 0755, true);
+              }
+
             // Upload Slider Image
             $image_name = time().'.'.$image_ext;
             move_uploaded_file($_FILES['s_image']['tmp_name'], $image_dir.$image_name);
