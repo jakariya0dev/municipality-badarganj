@@ -7,7 +7,7 @@
 
     if(isset($_POST['submit'])){
 
-        if($_FILES['image']['size'] < 2*1024*1024 && $_FILES['image']['size'] > 0){
+        if($_FILES['s_image']['size'] < 5*1024*1024 && $_FILES['s_image']['size'] > 0){
 
             $image_dir = "uploads/slider/";
             $image_ext = pathinfo($_FILES["s_image"]["name"], PATHINFO_EXTENSION);
@@ -78,7 +78,7 @@
                     <?php if ($image_error): ?>
                       <div class="alert alert-warning mb-5" role="alert">
                         <h4>You Have Error!</h4> 
-                        Select a valid image file (type: jpg, jpeg, png) with less than 2MB size.
+                        Select a valid image file (type: jpg, jpeg, png) with less than 5MB size.
                       </div>
                     <?php endif; ?>
                     
