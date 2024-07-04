@@ -44,7 +44,7 @@
                                     <?php while ($row = mysqli_fetch_array($teacher)): ?>
                                         
                                         <div class="col">
-                                            <a href="<?php echo 'employee-profile.php?id='.$row['id'] ?>" class="text-decoration-none">
+                                            <a href="<?php echo 'counsellor-profile.php?id='.$row['id'] ?>" class="text-decoration-none">
                                                 <div class="item employee-card mb-5">
                                                     <div class="team-member card">
                                                         <div class="pro-pic card-img-top">
