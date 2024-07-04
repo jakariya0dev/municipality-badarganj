@@ -27,6 +27,11 @@
         if($_FILES['image']['size'] > 0 ){
 
             $image_dir = "uploads/feature/";
+
+            if (!file_exists($image_dir)) {
+                mkdir($image_dir, 0755, true);
+            }
+            
             $image_ext = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
 
             // Check valid Image or not
