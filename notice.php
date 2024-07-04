@@ -15,7 +15,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Bootstrap demo</title>
+        <title><?php echo $ins_name_bn.' | '.$ins_name_en. 'official website' ?></title>
 
         <?php include_once './section/header-links.php' ?>
     </head>

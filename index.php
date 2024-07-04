@@ -1,7 +1,6 @@
 <?php 
   
   include_once 'config.php';
-  include_once 'static-data.php';
   
 ?>
 
@@ -11,7 +10,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title><?php echo $ins_name_bn.' | '.$ins_name_en. 'offical website' ?></title>
+        <title><?php echo $ins_name_bn.' | '.$ins_name_en. 'official website' ?></title>
 
 
         <?php include_once './section/header-links.php' ?>

@@ -13,7 +13,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Bootstrap demo</title>
+        <title> <?php echo $ins_name_bn.' | '.$ins_name_en. 'official website' ?> </title>
 
         <?php include_once './section/header-links.php' ?>
     </head>
@@ -48,7 +48,7 @@
                                                 <div class="item employee-card mb-5">
                                                     <div class="team-member card">
                                                         <div class="pro-pic card-img-top">
-                                                            <img class="img-fluid w-100 h-100" src="<?php echo 'admin./'.$row['image'] ?>" />
+                                                            <img class="img-fluid w-100 h-100" src="<?php echo 'admin/'.$row['image'] ?>" />
                                                         </div>
                                                         <div class="social-icon mb-3">
                                                             <i class="fa-solid fa-phone-volume"></i> &nbsp; <?php echo $row['phone'] ?>
