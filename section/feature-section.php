@@ -32,7 +32,7 @@
 
         <div class="col-md-6">
             <div class="feature-img-right">
-                <img class="h-100 w-100 img-fluid" src="https://picsum.photos/id/870/200/300?grayscale&blur=2" alt="" />
+                <img class="h-100 w-100 img-fluid" src="./images/feature-main.png" alt="" />
             </div>
         </div>
     </div>

@@ -17,6 +17,11 @@
   --headline-font: 16px;
 }
 
+img{
+  object-fit: cover;
+  object-position: center;
+}
+
 .bg-primary {
   background-color: #03396c;
 }
